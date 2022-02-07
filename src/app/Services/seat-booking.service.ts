@@ -228,7 +228,7 @@ export class SeatBookingService {
     return foundBus
   }
 
-  
+
   setJourneyFare(data: any) {
     this.journey = data;
     console.log(this.journey);
