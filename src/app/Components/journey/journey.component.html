@@ -1,0 +1,33 @@
+<div class="container parentcontainer">
+  <div class="row justify-content-center" >
+    <div class="col lg-5 d-none d-lg-block">
+      <!-- <img
+       
+      /> -->
+
+      <div class="col col-lg-6 col-md-8 col-sm-12">
+        <div class="card bg-light mb-3">
+          <div class="card-header">Journey Details</div>
+          <div class="card-body">
+            <h5 class="card-title">{{ bus.Source }} To {{bus.Destination}}</h5>
+            <p class="card-text">
+              Date & Time :
+              {{ this.bookingService.journey1['departureDate'] }} |
+              {{ bus["Departure Time"] }}
+            </p>
+            <p class="card-text">{{ bus["Bus Name"] }}</p>
+            <p class="card-text">Coach Type : {{ bus["Coach Type"] }}</p>
+            <p class="card-text">
+              Seats No:
+              <span *ngFor="let seat of this.bookingService.journey['selectedSeats']">
+                {{ seat }}
+              </span>
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
