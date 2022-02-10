@@ -11,6 +11,11 @@ describe('TicketGenerateService', () => {
   });
 
   it('should be created', () => {
+    const service:TicketGenerateService=TestBed.get(TicketGenerateService);
     expect(service).toBeTruthy();
+  });
+  it('should return  true when generateTicket method', () => {
+    const service:TicketGenerateService=TestBed.get(TicketGenerateService);
+    expect(service.generateTicket ).toBeTruthy()
   });
 });

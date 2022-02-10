@@ -1,31 +1,33 @@
-
-
-<div style="display: grid; grid-template-columns: 60% 40%">
+<div class="   allData ">
   <div
     style="
       display: grid;
       grid-template-columns: auto auto auto;
       max-width: 250px;
       left: 300px;
+      background-color: white;
+      padding: 1rem;
     "
   >
     <div
       *ngFor="let no of newSeats; index as i"
-      style="padding: 20px"
+      style="padding: 3px"
       (click)="seatSelected(no)"
     >
-      <!-- <input type="checkbox" value="no" /> -->
-      <img
+     <img
         src="https://image.shutterstock.com/image-vector/modern-car-seat-icon-on-600w-2022666569.jpg"
         class="img img-fluid"
-      />{{ no }}
+        width="50px"
+
+      /><div>{{ no }}</div>
     </div>
   </div>
-  <div *ngIf="busDetails != undefined">
+  <div class="bg-light p-5 " *ngIf="busDetails != undefined">
     <div class="total">
       <h4>
         Selected Seats:
         {{ selectedSeats.join(', ')}}
+
       </h4>
       <h4>
         Total :
@@ -33,7 +35,7 @@
       </h4>
     </div>
     <div class="justify-content-center">
-      <button class="btn btn-primary btn-block" type="submit" (click)="confirm()">Confirm</button>
+      <button class="btn btn-primary btn-block mt-2 " type="submit" (click)="confirm()">Confirm</button>
     </div>
   </div>
 </div>

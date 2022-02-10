@@ -1,3 +1,16 @@
-img{
-  padding-top: 50px;
+img {
+  padding-top: 5px;
+}
+.busDataBox {
+  background: rgba(255, 255, 255, 0.6);
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 5px;
+}
+
+h1{
+  font-family: white;
+
 }

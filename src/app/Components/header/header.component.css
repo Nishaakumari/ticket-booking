@@ -1,0 +1,16 @@
+.myNav{
+  background: rgba( 255, 255, 255, 0.65 );
+backdrop-filter: blur( 15px );
+-webkit-backdrop-filter: blur( 15px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.item-Nav{
+  background: rgba(3, 24, 83, 0.65);
+backdrop-filter: blur( 15px );
+-webkit-backdrop-filter: blur( 15px );
+padding: 0 1rem;
+margin-left: 2rem;
+color: rgb(247, 243, 243);
+font-weight: bolder;
+
+}

@@ -39,6 +39,7 @@ export class JourneyComponent implements OnInit {
     this.bus=<Bus><unknown>this.bookingService.getBusById(this.bookingService.journey.busid);
     this.user=this.bookingService.user;
   }
+
   }
 
 

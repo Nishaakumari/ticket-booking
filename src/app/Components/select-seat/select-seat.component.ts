@@ -92,12 +92,18 @@ export class SelectSeatComponent implements OnInit {
     }
   }
   confirm() {
-    this.bookingService.setJourneyFare(
-      {
-        'busid':this.busId,
-      fare:this.busDetails["Fare"],
-      selectedSeats:this.selectedSeats}
-    );
-    this.router.navigate(['/passenger']);
+    if(this,this.selectedSeats.length==0){
+      alert('Select atleast one seat to continue')
+    }
+    else{
+      this.bookingService.setJourneyFare(
+        {
+          'busid':this.busId,
+        fare:this.busDetails["Fare"],
+        selectedSeats:this.selectedSeats}
+      );
+      this.router.navigate(['/passenger']);
+    }
+
   }
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,8 @@ import { UserComponent } from './Components/user/user.component';
 import { TicketGenerateService } from './Services/ticket-generate.service';
 import { SeatBookingService } from './Services/seat-booking.service';
 import { SeatNamePipe } from './pipes/seatname.pipe';
+import { LoginComponent } from './Components/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SeatNamePipe } from './pipes/seatname.pipe';
     AvailableBusesComponent,
     NotFoundComponent,
     UserComponent,
-    SeatNamePipe
+    SeatNamePipe,
+    LoginComponent
 
   ],
   imports: [
@@ -38,6 +41,7 @@ import { SeatNamePipe } from './pipes/seatname.pipe';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+
   ],
   providers: [SeatBookingService,TicketGenerateService],
   bootstrap: [AppComponent]

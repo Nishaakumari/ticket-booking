@@ -9,6 +9,7 @@ export class TicketGenerateService {
 
 
   constructor() { }
+  
   generateTicket(journey:any,bus:any){
     var newTicket:Ticket = {
       "id": Date.now(),

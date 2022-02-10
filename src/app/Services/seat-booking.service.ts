@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Bus } from '../interface/bus';
 import { TicketGenerateService } from './ticket-generate.service';
-import * as data from '../../assets/db.json';
+
 
 @Injectable({
   providedIn: 'root',

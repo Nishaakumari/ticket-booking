@@ -9,7 +9,11 @@ import { SeatBookingService } from 'src/app/Services/seat-booking.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  journey!: FormGroup;
+  journey = new  FormGroup({
+    sourceLocation: new FormControl('',Validators.required),
+    destination: new FormControl('',Validators.required),
+    departureDate: new FormControl('',Validators.required)
+});
   submitted : boolean = false;
   sourceCities: string[] = []
   destinationCities: string[] =[]
@@ -20,11 +24,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.sourceCities = this.bookingService.getSourceCities3();
     this.destinationCities = this.bookingService.getDestinationCities1();
-    this.journey = new  FormGroup({
-      sourceLocation: new FormControl(['',Validators.required]),
-      destination: new FormControl(['',Validators.required]),
-      departureDate: new FormControl((['',Validators.required]))
-  });
+    this.journey
 // {
 //   validators: [this.validJourney('sourceLocation', 'destination'),
 //   this.validDate('departureDate')]
@@ -64,4 +64,9 @@ onSubmit(){
   this.bookingService.getFilteredBuses(this.journey.value['sourceLocation'],this.journey.value['destination']);
 this.router.navigate(['/availablebuses'])
 }
+
+logout(){
+  localStorage.removeItem('user')
+}
+
 }
